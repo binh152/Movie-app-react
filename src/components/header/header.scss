@@ -18,11 +18,12 @@
 }
 
 .header {
-  height: $header-height;
+  height: 5rem;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  background-color: #053033;
   z-index: 99;
   transition: height 0.3s ease, background-color 0.3s ease;
 
