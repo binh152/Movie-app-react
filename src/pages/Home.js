@@ -24,7 +24,7 @@ const Home = () => {
         <div className="section mb-3">
           <div className="section__header mb-2">
             <h2>Xếp Hạng Movie</h2>
-            <Link to='/movie'> 
+            <Link to='/movie'>  
               <OutLineButton className='small'>Xem Thêm</OutLineButton>
             </Link>
           </div>
@@ -54,5 +54,4 @@ const Home = () => {
     </div>
   )
 }
-
 export default Home

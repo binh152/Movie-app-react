@@ -24,7 +24,7 @@ const HeroSlide = () => {
           params,
         });
         setMovieItems(response.results.slice(0, 4));
-        console.log(response);
+        // console.log(response);
       } catch {
         console.log("err");
       }
@@ -39,7 +39,6 @@ const HeroSlide = () => {
         grabCursor={true}
         spaceBetween={0}
         slidesPerView={1}
-        // autoplay={{delay:3000}}
       >
         {movieItems.map((item, i) => (
           <SwiperSlide key={i}>
@@ -113,7 +112,7 @@ const TrailerModal = (props) => {
 
   const iframeRef = useRef(null);
 
-  const onClose = () => iframeRef.current.setAttribute("src", "");
+  const onClose = () => iframeRef.current.setAttribute("src","");
 
   return (
     <Modal active={false} id={`modal_${item.id}`}>

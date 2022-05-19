@@ -8,7 +8,6 @@ import MovieCard from "../movie-card/MovieCard";
 
 import tmdbApi, { category } from "../../api/movieDbApi";
 
-
 const MovieList = (props) => {
   const [items, setItems] = useState([]);
   useEffect(() => {
@@ -30,7 +29,7 @@ const MovieList = (props) => {
       setItems(response.results);
     };
     getList();
-  });
+  },[]);
 
   return (
     <div className="movie-list">
