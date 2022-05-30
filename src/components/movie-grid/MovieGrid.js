@@ -129,7 +129,7 @@ const SearchMovie = (props) => {
         value={keyword}
         onChange={(e) => setKeyword(e.target.value)}
       />
-      <Button className='small' onClick={toSearch}><i class='bx bx-search-alt'></i></Button>
+      <Button className='small' onClick={toSearch}><i className='bx bx-search-alt'></i></Button>
     </div>
   );
 };
