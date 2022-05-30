@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 import "./movielist.scss";
@@ -11,30 +11,27 @@ import tmdbApi, { category } from "../../api/movieDbApi";
 const MovieList = (props) => {
   const [items, setItems] = useState([]);
 
-
-  const getList =  useCallback(async() => {
-    let response = null;
-    const params = {};
-
-    if (props.type !== "similar") {
-      switch (props.category) {
-        case category.movie:
-          response = await tmdbApi.getMoviesList(props.type, { params });
-          break;
-        default:
-          response = await tmdbApi.getTvList(props.type, { params });
-      }
-    } else {
-      response = await tmdbApi.similar(props.category, props.id);
-    }
-    setItems(response.results);
-  },[]);
-
   // 
   useEffect(() => {
-    
+    const getList =  async() => {
+      let response = null;
+      const params = {};
+  
+      if (props.type !== "similar") {
+        switch (props.category) {
+          case category.movie:
+            response = await tmdbApi.getMoviesList(props.type, { params });
+            break;
+          default:
+            response = await tmdbApi.getTvList(props.type, { params });
+        }
+      } else {
+        response = await tmdbApi.similar(props.category, props.id);
+      }
+      setItems(response.results);
+    };
     getList();
-  },[getList]);
+  },[props.category, props.id,props.type]);
 
   return (
     <div className="movie-list">
