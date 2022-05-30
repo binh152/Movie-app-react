@@ -17,7 +17,7 @@ const MovieCard = (props) => {
     <Link to={link}>
       <div className="movie-card" style={{ backgroundImage: `url(${bg})` }}>
         <Button>
-          <i class="bx bx-play-circle"></i>
+          <i className="bx bx-play-circle"></i>
         </Button>
       </div>
       <h3>{item.title || item.name}</h3>
@@ -26,3 +26,4 @@ const MovieCard = (props) => {
 };
 
 export default MovieCard;
+
