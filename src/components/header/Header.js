@@ -26,7 +26,7 @@ const Header = () => {
   const active = headerNav.findIndex((e) => e.path === pathName);
 
   useEffect(() => {
-    const shrinkHeader = () => {
+    const shrinkHeader = () => {  
       if (
         document.body.scrollTop > 100 ||
         document.documentElement.scrollTop > 100
