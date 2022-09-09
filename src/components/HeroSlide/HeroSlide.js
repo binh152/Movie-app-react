@@ -112,11 +112,11 @@ const TrailerModal = (props) => {
 
   const iframeRef = useRef(null);
 
-  const onClose = () => iframeRef.current.setAttribute("src","");
+  const onClose = () => iframeRef.current.setAttribute("src",null);
 
   return (
     <Modal active={false} id={`modal_${item.id}`}>
-      <ModalContent onclose={onClose}>
+      <ModalContent onClose={onClose}>
         <iframe ref={iframeRef} width="100%" height="500px" title="trailer modal"></iframe>
       </ModalContent>
     </Modal>
