@@ -64,9 +64,11 @@
         height: 2px;
         background-color: $main-color;
       }
-      &.active::after,
       &:hover::after {
         width: 100%;
+      }
+      .active{
+        color: $main-color;
       }
     }
 
