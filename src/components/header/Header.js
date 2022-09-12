@@ -50,7 +50,7 @@ const Header = () => {
             <div className="header__wrap container">
                 <div className="logo">
                     <img src={logo} alt="" />
-                    <NavLink exact to="/">
+                    <NavLink exact to="/" onClick={goTop}>
                         tMovie
                     </NavLink>
                 </div>
